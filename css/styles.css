@@ -476,7 +476,7 @@ font-weight: 500;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 .footer-icon-networks{
-    fill: none;
+    fill: #f4f4fd;
 }
 .footer-icon-media:hover, .footer-icon-media:focus{
 background-color: #31D0AA;
