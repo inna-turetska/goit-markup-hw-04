@@ -75,7 +75,8 @@ a {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
-    transition: color 250 ms,cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .nav-link:hover, .nav-link:focus, .nav-link.current,.contacts-link:hover,
@@ -115,7 +116,7 @@ a {
     color: #434455;
     display: block;
     padding: 24px 0;
-    transition: color 250 ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*header-end*/
@@ -130,7 +131,8 @@ a {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1440px;
+    background-position: center;
+    max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
    
@@ -189,6 +191,7 @@ a {
     min-width: 169px;
     height: 56px;
     border: none;
+    transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
  .button:focus{
@@ -204,11 +207,14 @@ a {
     justify-content: center;
     width: 264px;
     margin-bottom: 8px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
 }
 .icon{
-    width: 64px;
-    padding-bottom: 24px;
-    padding-top: 24px;
+    
+   
+  
 }
 .solution-title{
    font-weight: 500;
@@ -262,7 +268,9 @@ a {
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     width: calc((100% - 72px)/4);
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     
 
 }
@@ -300,10 +308,16 @@ a {
     padding: 12px;
     background-color: #4d5ae5; ;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
+.icon-media:hover,
+.icon-media:focus{
+    background-color: #404bbf;
+}
 .icon-networks{
     width: 16px;
     height: 16px;
+    fill: #f4f4fd;
 }
 /*portfolio*/
 
@@ -359,6 +373,7 @@ border-top:none ;
 }
 .portfolio-item{
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-overlay {
     position: relative;
@@ -366,6 +381,8 @@ border-top:none ;
 }
 
 .overlay {
+    height: 100%;
+    top: 0;
     position: absolute;
     background-color: #4d5ae5;
     font-weight: 400;
@@ -376,13 +393,12 @@ border-top:none ;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 40px 32px;
+  
    
 }
 
-.portfolio-item:hover .overlay {
+.box-overlay:hover .overlay {
     transform: translateY(0);
 }
 
@@ -394,7 +410,7 @@ border-top:none ;
 /*footer*/
 .container-footer{
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .footer-page{
@@ -404,7 +420,9 @@ border-top:none ;
     
  
 }
-
+.footer-page-logo{
+    margin-right: 120px;
+}
 
 .footer-social{
 font-weight: 500;
@@ -417,9 +435,9 @@ font-weight: 500;
 }
 .footer-media{
     display: block;
-    width: 208px;
-    height: 80px;
-    margin-left: 120px;
+   
+ 
+
 }
 .footer-icon-list{
     display: flex;
@@ -432,26 +450,26 @@ font-weight: 500;
 .footer-link{
         display: inline-block;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        padding: 12px;
+        cursor: pointer;
+       
+}
+.footer-icon-media{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         padding: 12px;
         background-color: #4d5ae5;
         cursor: pointer;
         transition: background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-icon-media{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    
-}
+    }
 .footer-icon-networks{
     fill: none;
 }
-.footer-link:hover, .footer-link:focus{
+.footer-icon-media:hover, .footer-icon-media:focus{
 background-color: #31D0AA;
 }
 .footer-logo .logo-part {
