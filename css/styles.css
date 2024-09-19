@@ -76,7 +76,7 @@ a {
     padding: 24px 0;
     display: block;
 
-transition-property: background-color;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -118,7 +118,7 @@ transition-property: background-color;
     color: #434455;
     display: block;
     padding: 24px 0;
-transition-property: background-color;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
